@@ -1,0 +1,64 @@
+
+    <title>Grab Your Book</title>
+    <style>
+        #bookList{
+            display: flex;
+            justify-content: space-around;
+        }
+        img{
+            width: 150px;
+            height: 200px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Library!</h1>
+    <p id="time">    
+        <script>document.getElementById('time').innerHTML= "Current Time:" + Date();</script>
+    </p>
+    <hr>
+    <section id="bookList">
+        <article class="book">
+            <h3>The Book Thief</h3>
+            <img src="https://cdn.lifehack.org/wp-content/uploads/2015/03/71h2sjik5al-_sl1380_.jpg" alt="">
+            <p>Markus Zusak</p>
+            <button onclick="showDetails1()">View Details</button>
+        </article>
+        <article class="book">
+            <h3>The Lord Of The Rings</h3>
+            <img src="https://www.oberlo.com/media/1603897585-image12-1.jpg?w=1824&fit=max" alt="">
+            <p>JRR Tolkein</p>
+            <button onclick="showDetails2()">View Details</button>
+        </article>
+        <article class="book">
+            <h3>1984</h3>
+            <img src="https://cdn.lifehack.org/wp-content/uploads/2015/03/1984.jpg" alt="">
+            <p>George Orwell</p>
+            <button onclick="showDetails3()">View Details</button>
+        </article>
+        <button onclick="gotosearch()">Search my fav Book</button>
+    </section>
+    <br/><br/>
+    <button type="button" name="logout" onclick="logout()">Logout</button>
+    <script>
+        function showDetails1(){
+            location.href = 'http://localhost:3000/details/101';
+        }
+        function showDetails2(){
+            location.href = 'http://localhost:3000/details/201';
+        }
+        function showDetails3(){
+            location.href = 'http://localhost:3000/details/301';
+        }
+        function gotosearch(){
+            location.href='http://localhost:3000/search';
+        }
+        function logout(){
+            location.href='http://localhost:3000/logout';
+        }
+    </script>
+</body>
+</html>

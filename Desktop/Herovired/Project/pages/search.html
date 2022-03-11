@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Book</title>
+    <style>
+        .search{
+            width: 75%;
+            border-radius: 5px;
+        }
+        .btn{
+            background-color: blue;
+            color: white;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search your favourite Book</h1>
+    <input type="text" id="title" class="search" placeholder="Enter the name of the book"><br><br>
+    <p id="note"></p>
+    <button class="btn" onclick="search()">Search</button>
+    
+    <script>
+       function search()
+        {
+            var title = document.getElementById('title').value;
+            if(title=='The Book Thief'){
+            location.href = 'http://localhost:3000/search/The Book Thief';
+            }
+            else if(title=='The Lord Of The Rings'){
+                location.href = 'http://localhost:3000/search/The Lord Of The Rings';
+            }
+            else if(title=='1984'){
+                location.href = 'http://localhost:3000/search/1984';
+            }
+            else{
+                title.innerHTML=''
+                document.getElementById('note').innerHTML= 'Book not found'
+            }
+        }
+        
+    </script>
+</body>
+</html>
